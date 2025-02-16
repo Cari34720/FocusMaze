@@ -1,0 +1,192 @@
+/* 🔮 Globales Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #2e1a47, #100d23);
+    color: white;
+    text-align: center;
+}
+
+/* 🔐 Login-Screen */
+#login-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.title {
+    font-size: 50px;
+    text-shadow: 0px 0px 20px #a47dff;
+}
+
+.input-group {
+    margin: 20px;
+}
+
+input {
+    width: 80%;
+    padding: 12px;
+    margin: 10px;
+    border: 2px solid #a47dff;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+/* 🎮 Labyrinth-Game */
+#game-screen {
+    display: none;
+    padding: 20px;
+}
+
+#labyrinth-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.room {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 20px;
+}
+
+.room:hover {
+    transform: scale(1.1);
+    background: #a47dff;
+    box-shadow: 0px 0px 30px #a47dff;
+}
+
+/* 🏆 Leaderboard */
+#leaderboard {
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+th {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* ✨ Magische Buttons */
+.btn {
+    background: #8c52ff;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.btn:hover {
+    background: #a47dff;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px #a47dff;
+}
+
+/* 📜 Rätsel */
+#question-screen {
+    display: none;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+    margin-top: 30px;
+}
+
+/* 🛠 Einstellungen */
+#settings-screen {
+    display: none;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+/* 🎨 Personalisierung */
+#customization-screen {
+    display: none;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.avatar-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: 0.3s;
+}
+
+.avatar:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px white;
+}
+
+/* 📢 Neuigkeiten */
+#news {
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+marquee {
+    font-size: 18px;
+    color: #a47dff;
+}
+
+/* 🎭 Dark & Light Mode */
+body.light-mode {
+    background: linear-gradient(to bottom, #ffffff, #e0e0e0);
+    color: black;
+}
+
+.light-mode .btn {
+    background: #3d3d3d;
+}
+
+.light-mode .room {
+    background: #d3d3d3;
+    color: black;
+}
+
+.light-mode table, .light-mode th, .light-mode td {
+    color: black;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusMaze – Magisches Lernen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 🔮 Startbildschirm -->
+    <div id="login-screen">
+        <h1 class="title">🔮 Willkommen in FocusMaze!</h1>
+        <p>Betritt das magische Labyrinth des Wissens.</p>
+
+        <select id="language-select">
+            <option value="de">Deutsch</option>
+            <option value="en">English</option>
+        </select>
+
+        <div class="input-group">
+            <input type="email" id="email" placeholder="E-Mail">
+            <input type="password" id="password" placeholder="Passwort">
+        </div>
+
+        <button class="btn" id="login-btn">Einloggen</button>
+        <button class="btn" id="google-login-btn">Mit Google anmelden</button>
+        <button class="btn" id="register-btn">Registrieren</button>
+    </div>
+
+    <!-- 🎮 Labyrinth-Spiel -->
+    <div id="game-screen" style="display: none;">
+        <h2 id="user-greeting">Willkommen, Magier!</h2>
+        <p>Wähle einen Raum und beantworte die Frage, um weiterzukommen!</p>
+
+        <div id="labyrinth-container">
+            <div class="room" data-room="1">🔒 Raum 1</div>
+            <div class="room" data-room="2">🔒 Raum 2</div>
+            <div class="room" data-room="3">🔒 Raum 3</div>
+            <div class="room" data-room="4">🔒 Raum 4</div>
+            <div class="room" data-room="5">🔒 Raum 5</div>
+            <div class="room" data-room="6">🔒 Raum 6</div>
+            <div class="room" data-room="7">🔒 Raum 7</div>
+            <div class="room" data-room="8">🔒 Raum 8</div>
+            <div class="room" data-room="9">🔒 Raum 9</div>
+            <div class="room" data-room="10">🔒 Raum 10</div>
+        </div>
+
+        <button class="btn" id="generate-ai">✨ KI-Frage generieren</button>
+        <button class="btn" id="logout-btn">Abmelden</button>
+    </div>
+
+    <!-- 🏆 Fortschritt & Leaderboard -->
+    <div id="leaderboard">
+        <h2>🏆 Bestenliste</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Platz</th>
+                    <th>Name</th>
+                    <th>Punkte</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Magier Merlin</td>
+                    <td>1200</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Hexe Luna</td>
+                    <td>1100</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 📜 Rätsel & Fragen -->
+    <div id="question-screen" style="display: none;">
+        <h2>Beantworte die Frage:</h2>
+        <p id="question-text">Was ist 2 + 2?</p>
+        <input type="text" id="answer" placeholder="Antwort eingeben">
+        <button class="btn" id="submit-answer">Antwort prüfen</button>
+    </div>
+
+    <!-- 🛠 Einstellungen -->
+    <div id="settings-screen" style="display: none;">
+        <h2>⚙️ Einstellungen</h2>
+        <p>Wähle dein bevorzugtes Thema:</p>
+        <select id="theme-select">
+            <option value="dark">Dunkelmodus</option>
+            <option value="light">Hellmodus</option>
+        </select>
+        <button class="btn" id="save-settings">Speichern</button>
+    </div>
+
+    <!-- 🎨 Personalisierung -->
+    <div id="customization-screen" style="display: none;">
+        <h2>🎨 Avatar & Farben</h2>
+        <p>Wähle einen Avatar:</p>
+        <div class="avatar-container">
+            <img src="wizard1.png" alt="Avatar 1" class="avatar">
+            <img src="wizard2.png" alt="Avatar 2" class="avatar">
+        </div>
+        <button class="btn" id="save-avatar">Avatar speichern</button>
+    </div>
+
+    <!-- 📢 Updates & Ankündigungen -->
+    <div id="news">
+        <h2>📢 Neuigkeiten</h2>
+        <marquee>🚀 Neue magische Fragen wurden hinzugefügt! 🔮</marquee>
+    </div>
+
+    <!-- 📝 KI-Feedback -->
+    <div id="ai-feedback" style="display: none;">
+        <h2>🤖 KI-Analyse</h2>
+        <p>Deine Antwort wird analysiert...</p>
+    </div>
+
+    <script src="firebase-config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
